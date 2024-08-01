@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HoMePaGe</title>
+</head>
+<body>
+<!-- Fetching Data from controller -->
+    <h1 th:text="'Hello from Home Page of  ' + ${name}"></h1>
+<!-- Sending Data to the controller -->
+<!-- creating form for submitting data-->
+<form action="#" th:action="@{/submit}" method="post" >
+    <label for="NAME">Full Name</label>
+    <input type="text" id="NAME" name="fullName"/>
+
+    <label for="AGE">Age</label>
+    <input type="text" id="AGE" name="age"/>
+
+    <label for="EMAIL">Email</label>
+    <input type="text" id="EMAIL" name="email"/>
+    <button type="submit">Submit</button>
+</form>
+
+    <p th:text = "${success}"></p>
+    <a href="/user-details">click for user details</a>
+</body>
+</html>
